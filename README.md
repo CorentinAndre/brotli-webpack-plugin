@@ -18,7 +18,7 @@ module.exports = {
 			asset: '[path].br[query]',
 			test: /\.(js|css|html|svg)$/,
 			threshold: 10240,
-			minRatio: 0.8
+			minRatio: 0.8,
 		})
 	]
 }
@@ -36,6 +36,7 @@ Arguments:
 * `threshold`: Only assets bigger than this size (in bytes) are processed. Defaults to `0`.
 * `minRatio`: Only assets that compress better that this ratio are processed. Defaults to `0.8`.
 
+
 Optional arguments for Brotli (see [iltorb](https://github.com/MayhemYDG/iltorb#brotliencodeparams) doc for details):
 * `mode`: Default: 0,
 * `quality`: Default: 11,
@@ -43,6 +44,7 @@ Optional arguments for Brotli (see [iltorb](https://github.com/MayhemYDG/iltorb#
 * `lgblock`: Default: 0,
 * `size_hint`: Default: 0,
 * `disable_literal_context_modeling`: Default: false
+* `deleteOriginalAssets`: remove assets compressed with brotli to reduce bundle size. Default: false
 
 ## License
 
